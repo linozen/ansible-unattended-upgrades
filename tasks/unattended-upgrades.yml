@@ -66,6 +66,7 @@
     owner: root
     group: root
     mode: 0644
+  when: unattended_upgrade_enabled == 1
 
 - name: Reload systemd daemon
   systemd:
@@ -82,3 +83,4 @@
     name: apt-daily-upgrade.timer
     state: restarted
     enabled: true
+  when: unattended_upgrade_enabled == 1
