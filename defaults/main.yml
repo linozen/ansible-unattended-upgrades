@@ -1,4 +1,7 @@
 ---
+# Enable actually doing upgrades
+unattended_upgrade_enabled: 1
+
 # Cache update time for apt module
 unattended_cache_valid_time: 3600
 
@@ -131,7 +134,6 @@ unattended_dpkg_options: []
 # unattended_dpkg_options:
 #   - "--force-confdef"
 #   - "--force-confold"
-
 
 # Use apt bandwidth limit feature, this example limits the download speed to 70kb/sec
 #unattended_dl_limit: 70
