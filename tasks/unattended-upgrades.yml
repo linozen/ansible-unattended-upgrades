@@ -84,3 +84,10 @@
     state: restarted
     enabled: true
   when: unattended_upgrade_enabled == 1
+
+- name: Disable apt-daily-upgrade.timer
+  systemd:
+    name: apt-daily-upgrade.timer
+    state: stopped
+    enabled: false
+  when: unattended_upgrade_enabled == 0
